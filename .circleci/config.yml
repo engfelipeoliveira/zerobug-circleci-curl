@@ -5,4 +5,4 @@ jobs:
       - image: circleci/node:4.8.2 # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
-      - run: curl -d "token=5db63b48744bb86a21154f28cfd4c446&id_target=129&id=9rrr18" -X POST https://zerobug.co/build.php
+      - run: curl -d "token=5db63b48744bb86a21154f28cfd4c446&id_target=129&id=9zzzr18" -X POST https://zerobug.co/build.php
