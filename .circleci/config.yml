@@ -5,4 +5,5 @@ jobs:
       - image: circleci/node:4.8.2
     steps:
       - checkout
-      - run: 
+      - run: curl -k -u $ZEROBUGUID:$ZEROBUGTOKEN --request POST -H "Content-Type:application/json" -d '{"pit":"130","targetid":"izIM7bGpunBizVG582hZ1598197462","ci":"Cicle CI","tipo":"6"}' https://zerobug.co/ScanTarget/
+
