@@ -5,5 +5,5 @@ jobs:
       - image: circleci/node:4.8.2
     steps:
       - checkout
-      - run: curl -k -u $ZEROBUGUID:$ZEROBUGTOKEN --request POST -H "Content-Type:application/json" -d '{"pit":"131","targetid":"Os29QNuKcr9mUvaVS4SX1598494959","ci":"Cicle CI","tipo":"6"}' https://zerobug.co/ScanTarget/
-
+      #- run: curl -k -u $ZEROBUGUID:$ZEROBUGTOKEN --request POST -H "Content-Type:application/json" -d '{"pit":"131","targetid":"Os29QNuKcr9mUvaVS4SX1598494959","ci":"Cicle CI","tipo":"6"}' https://zerobug.co/ScanTarget/
+- run Invoke-RestMethod -uri "https://zerobug.co/ScanTarget/" -ContentType "application/json; charset=UTF-8"  -Method POST -Headers @{ Authorization = "Basic $([System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes('cSu0wsu6Uhc%DNyvffTs1598894759:63830201e34824d316d70b5f37e469b5')))"} -Body $(@{pit="127";targetid="FWgdKZAhP7Z8kctQAsI41598920881";ci="Bitbucket";tipo="15"}| ConvertTo-Json)
